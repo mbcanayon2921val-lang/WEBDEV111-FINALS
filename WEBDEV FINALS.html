@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARJO X OB Motorcycle Parts & Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,sans-serif;background:#0a0a0a;color:#e5e5e5}
+header{position:fixed;width:100%;top:0;background:rgba(10,10,10,0.9);backdrop-filter:blur(10px);padding:15px 40px;display:flex;justify-content:space-between;align-items:center;z-index:1000}
+header h1{margin:0;font-size:20px;color:#facc15;letter-spacing:1px}
+nav a{margin-left:20px;color:#e5e5e5;text-decoration:none;font-weight:500}
+nav a:hover{color:#facc15}
+.hero{height:100vh;background:url('https://images.unsplash.com/photo-1517949908114-721e3f2c34a5') center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+.hero h2{font-size:50px;margin:0;color:#fff}
+.hero p{font-size:18px;color:#d4d4d4;margin:10px 0 20px}
+.hero button{padding:12px 25px;border:none;background:#facc15;color:#000;font-weight:600;border-radius:30px;cursor:pointer}
+.section{padding:100px 40px;text-align:center}
+.section h2{font-size:32px;margin-bottom:40px;color:#facc15}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:#111;padding:30px;border-radius:15px;transition:0.3s;border:1px solid #1f1f1f}
+.card:hover{transform:translateY(-10px);border-color:#facc15}
+.card h3{margin-top:0;color:#fff}
+.card p{color:#a3a3a3}
+footer{background:#000;padding:40px;text-align:center;color:#777}
+input,textarea{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #333;background:#0f0f0f;color:#fff}
+button.submit{padding:12px 25px;background:#facc15;border:none;color:#000;font-weight:600;border-radius:25px;cursor:pointer}
+.spacer{height:70px}
+</style>
+</head>
+<body>
+<header>
+<h1>ARJO X OB</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+<div class="spacer"></div>
+<section class="hero" id="home">
+<h2>Premium Motorcycle Parts & Services</h2>
+<p>Engineered for performance. Built for riders.</p>
+<button onclick="scrollToSection('contact')">Book Service</button>
+</section>
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card"><h3>Engine Repair</h3><p>Precision diagnostics and repair for optimal performance.</p></div>
+<div class="card"><h3>Maintenance</h3><p>Regular servicing to keep your bike in peak condition.</p></div>
+<div class="card"><h3>Brake Systems</h3><p>Advanced brake servicing for safety and control.</p></div>
+<div class="card"><h3>Customization</h3><p>Upgrade your ride with premium modifications.</p></div>
+</div>
+</section>
+<section class="section" id="products">
+<h2>Featured Products</h2>
+<div class="cards">
+<div class="card"><h3>Performance Tires</h3><p>High grip and durability for all terrains.</p></div>
+<div class="card"><h3>Brake Components</h3><p>Reliable stopping power with premium materials.</p></div>
+<div class="card"><h3>Engine Oils</h3><p>Top-grade lubricants for maximum engine life.</p></div>
+<div class="card"><h3>Spark Systems</h3><p>High-performance ignition solutions.</p></div>
+</div>
+</section>
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<textarea placeholder="How can we help you?" required></textarea>
+<button class="submit" type="submit">Send Message</button>
+</form>
+<p id="msg"></p>
+</section>
+<footer>
+<p>© 2026 ARJO X OB Motorcycle Parts & Services. All rights reserved.</p>
+</footer>
+<script>
+function submitForm(e){e.preventDefault();document.getElementById('msg').innerText='Your message has been sent.'}
+function scrollToSection(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+</script>
+</body>
+</html>
